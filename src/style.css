@@ -1,0 +1,65 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation */
+nav {  
+  background-color: #4cc321e4;
+  padding: 20px;
+}
+
+nav ul {  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {  
+  margin-right: 10px;
+}
+
+nav ul li a {  
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #4cc321;
+}
+
+/* VehicleList */
+
+.vehicle-list {
+  display: grid;  
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.vehicle-card {
+  background-color: white;  
+  border-radius: 4px;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.vehicle-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.vehicle-card img {
+  width: 100%;
+}
+ 
