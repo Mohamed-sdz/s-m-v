@@ -37,7 +37,7 @@ Vehicle System Management is a comprehensive web application for managing vehicl
 ## Technologies Used
 
 - Frontend: React, Redux, React Router, Axios, ReactDOM
-- Backend: Node.js, Express
+- Backend: Node.js,  server.js
 - Database: JSON (db.json)
 
 ## Installation
@@ -51,7 +51,7 @@ Vehicle System Management is a comprehensive web application for managing vehicl
 7. Install backend dependencies: `npm install`
 8. Start the backend server: `npm start`
 
-The frontend server will run on `http://localhost:3000`, and the backend server will run on `http://localhost:5000`.
+The frontend server will run on `http://localhost:3000`, and the backend server will run on `http://localhost:3000`.
 
 ## Usage
 
