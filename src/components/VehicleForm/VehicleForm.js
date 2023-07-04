@@ -25,7 +25,7 @@ const VehicleForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response accordingly
-       
+
         // Clear form inputs
         setMake('');
         setModel('');

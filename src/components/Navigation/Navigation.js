@@ -10,7 +10,7 @@ const Navigation = () => {
       </Link>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" aria-current="page">Home</Link>
         </li>
         <li>
           <Link to="/vehicles">All Vehicles</Link>

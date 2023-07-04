@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './VehicleList.css';
+
 const VehicleList = () => {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3000/vehicles')
       .then((response) => response.json())
-      .then((data) => setVehicles(data));
+      .then((data) => setVehicles(data))
+      .catch((error) => {
+        console.error('Error fetching vehicles:', error);
+      });
   }, []);
 
   return (
@@ -24,3 +28,4 @@ const VehicleList = () => {
 };
 
 export default VehicleList;
+

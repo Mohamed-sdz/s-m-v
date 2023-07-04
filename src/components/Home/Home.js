@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import HeroSection from './HeroSection';
+import axios from 'axios';
 
-// Hero section
-function HeroSection() {
-  return (
-    <div className="hero">
-      <img src="https://example.com/hero.jpg" alt="Hero" />
-      <h1>Welcome to Auto Mart Vehicle Management System</h1>
-      <button>Call to action</button>
-    </div>
-  );
-}
-
-// Search functionality
 function fetchVehicles(searchTerm) {
-  return fetch(`https://api.example.com/vehicles?search=${searchTerm}`)
-    .then(response => response.json())
+  const endpoint = `http://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModels&keyword=${searchTerm}`;
+
+  return axios.get(endpoint)
+    .then(response => response.data)
     .catch(error => {
       console.error('Error fetching vehicles:', error);
-      return [];
+      throw error;
     });
 }
 
@@ -27,7 +19,15 @@ function Search() {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
-    fetchVehicles(searchTerm).then(setVehicles);
+    fetchVehicles(searchTerm)
+      .then(data => {
+        const models = data.Models;
+        setVehicles(models);
+      })
+      .catch(error => {
+        console.error('Error fetching vehicles:', error);
+        // Handle the error here (e.g., show an error message)
+      });
   }, [searchTerm]);
 
   return (
@@ -38,8 +38,8 @@ function Search() {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       {vehicles.map(vehicle => (
-        <div key={vehicle.id} className="vehicle">
-          {vehicle.name}
+        <div key={vehicle.model_id} className="vehicle">
+          {vehicle.model_name}
         </div>
       ))}
     </div>
@@ -58,3 +58,5 @@ const Home = () => {
 };
 
 export default Home;
+
+
