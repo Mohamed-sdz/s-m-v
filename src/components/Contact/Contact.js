@@ -17,7 +17,7 @@ const Contact = () => {
           <FontAwesomeIcon icon={faPhone} />
           Phone:
         </h3>
-        <p>+1 123-456-7890</p>
+        <p>+1 xxx-xxx-xxxx</p>
         <h3>
           <FontAwesomeIcon icon={faEnvelope} />
           Email:
