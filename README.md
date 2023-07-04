@@ -17,7 +17,7 @@ Vehicle System Management is a comprehensive web application for managing vehicl
 |         └── Home/           | Contains the Home component                   |
 |         └── Contact/        | Contains the Contact component                |
 |         └── About/          | Contains the About component                  |
-|         └── ...             | Other components                              |
+|                                                    |
 |     └── App.js      | Main component that renders the application            |
 |     └── index.js    | Entry point of the application                         |
 | backend/           | Contains the backend application code                   |
@@ -51,7 +51,7 @@ Vehicle System Management is a comprehensive web application for managing vehicl
 7. Install backend dependencies: `npm install`
 8. Start the backend server: `npm start`
 
-The frontend server will run on `http://localhost:3000`, and the backend server will run on `http://localhost:3000`.
+The frontend server will run on `http://localhost:3000`, and the backend server will run on `http://localhost:3001`.
 
 ## Usage
 

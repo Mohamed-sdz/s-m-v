@@ -13,13 +13,13 @@ const App = () => {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/vehicles')
+    fetch('/api/vehicles')
       .then((res) => res.json())
       .then((data) => setVehicles(data));
   }, []);
 
   const addVehicle = (newVehicle) => {
-    setVehicles([...vehicles, newVehicle]);
+    setVehicles((prevVehicles) => [...prevVehicles, newVehicle]);
   };
 
   return (
@@ -47,4 +47,3 @@ const App = () => {
 };
 
 export default App;
-
